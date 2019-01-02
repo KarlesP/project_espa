@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<style>
+  .center {
+    margin: auto;
+    width: auto;
+    padding: 1px;
+    padding-left: 15.8rem;
+  }
+  </style>
+<section class="hero is-primary is-bold is-large">
+  <div class="hero-body">
+    <form name="DT" method='POST' action="/results" enctype="multipart/form-data" >
+      <table id="datatable" name="datatable" class="display" align="center">
+          <col width="10">
+          <col width="10">
+          <col width="10">
+          <col width="10">
+          <col width="10">
+          <col width="10">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>1.Physical</th>
+                  <th>2.Financial</th>
+                  <th>3 Social</th>
+                  <th>4.Cultural</th>
+                  <th>5.Human</th>
+                  <th>6.Enviromental</th>
+              </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>1.Physical</td>
+              <td><input type="number" step="any" id="row-1-physical" name="physical" value="0"></td>
+              <td><input type="number" step="any" id="row-1-financial" name="financial" value="0"></td>
+              <td><input type="number" step="any" id="row-1-social" name="social" value="0"></td>
+              <td><input type="number" step="any" id="row-1-cultural" name="cultural" value="0"></td>
+              <td><input type="number" step="any" id="row-1-human" name="human" value="0"></td>
+              <td><input type="number" step="any" id="row-1-enviromental" name="enviromental" value="0"></td>
+          </tr>
+          <tr>
+            <td>2.Financial</td>
+            <td><input type="number" step="any" id="row-2-physical" name="physical" value="0"></td>
+            <td><input type="number" step="any" id="row-2-financial" name="financial" value="0"></td>
+            <td><input type="number" step="any" id="row-2-social" name="social" value="0"></td>
+            <td><input type="number" step="any" id="row-2-cultural" name="cultural" value="0"></td>
+            <td><input type="number" step="any" id="row-2-human" name="human" value="0"></td>
+            <td><input type="number" step="any" id="row-2-enviromental" name="enviromental" value="0"></td>
+          </tr>
+          <tr>
+              <td>3.Social</td>
+              <td><input type="number" step="any" id="row-3-physical" name="physical" value="0"></td>
+              <td><input type="number" step="any" id="row-3-financial" name="financial" value="0"></td>
+              <td><input type="number" step="any" id="row-3-social" name="social" value="0"></td>
+              <td><input type="number" step="any" id="row-3-cultural" name="cultural" value="0"></td>
+              <td><input type="number" step="any" id="row-3-human" name="human" value="0"></td>
+              <td><input type="number" step="any" id="row-3-enviromental" name="enviromental" value="0"></td>
+            </tr>
+            <tr>
+                <td>4.Cultural</td>
+                <td><input type="number" step="any" id="row-4-physical" name="physical" value="0"></td>
+                <td><input type="number" step="any" id="row-4-financial" name="financial" value="0"></td>
+                <td><input type="number" step="any" id="row-4-social" name="social" value="0"></td>
+                <td><input type="number" step="any" id="row-4-cultural" name="cultural" value="0"></td>
+                <td><input type="number" step="any" id="row-4-human" name="human" value="0"></td>
+                <td><input type="number" step="any" id="row-4-enviromental" name="enviromental" value="0"></td>
+            </tr>
+            <tr>
+                <td>5.Human</td>
+                <td><input type="number" step="any" id="row-5-physical" name="physical" value="0"></td>
+                <td><input type="number" step="any" id="row-5-financial" name="financial" value="0"></td>
+                <td><input type="number" step="any" id="row-5-social" name="social" value="0"></td>
+                <td><input type="number" step="any" id="row-5-cultural" name="cultural" value="0"></td>
+                <td><input type="number" step="any" id="row-5-human" name="human" value="0"></td>
+                <td><input type="number" step="any" id="row-5-enviromental" name="enviromental" value="0"></td>
+            </tr>
+            <tr>
+                <td>6.Enviromental</td>
+                <td><input type="number" step="any" id="row-6-physical" name="physical" value="0"></td>
+                <td><input type="number" step="any" id="row-6-financial" name="financial" value="0"></td>
+                <td><input type="number" step="any" id="row-6-social" name="social" value="0"></td>
+                <td><input type="number" step="any" id="row-6-cultural" name="cultural" value="0"></td>
+                <td><input type="number" step="any" id="row-6-human" name="human" value="0"></td>
+                <td><input type="number" step="any" id="row-6-enviromental" name="enviromental" value="0"></td>
+            </tr>
+        </tbody>
+      </table>
+      <div class="center">
+        <input type="checkbox" name="model" value="mdl1" > Model 1 
+        <input type="checkbox" name="model" value="mdl2" > Model 2<br>
+        <input class="btn btn-primary" type="submit" value="Calculate Predictions">
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
